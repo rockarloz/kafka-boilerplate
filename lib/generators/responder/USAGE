@@ -1,0 +1,12 @@
+Usage:
+    rails generate responder NOMBRE TOPICO
+
+Description:
+    Crea una clase que extiende de ApplicationResponder en app/responders
+    Para enviar mensajes a un cluster Kafka
+
+Example:
+    rails generate responder Paciente pacientes_creados
+
+    This will create:
+        app/responders/paciente.rb

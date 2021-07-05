@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+# A generic karafka consumer
+class <%= class_name %> < ApplicationConsumer
+  def consume
+    params_batch.each do |message|
+      # TODO: Some stuff
+    end
+  end
+end

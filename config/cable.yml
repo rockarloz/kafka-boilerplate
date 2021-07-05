@@ -1,0 +1,12 @@
+development:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL", "redis://localhost:6379/1") %>
+  channel_prefix: <%= ENV.fetch("ACTION_CABLE_CHANNEL_PREFIX", "rakams_api_development") %>
+
+test:
+  adapter: test
+
+production:
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  channel_prefix: <%= ENV.fetch("ACTION_CABLE_CHANNEL_PREFIX", "rakams_api_production") %>
